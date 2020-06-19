@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>
+		Registration</title>
+		<link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+<style>
+td{
+	color:white;
+	font-size:25px;
+	font-weight:Bolder;
+	font-family:"Arial",sans-serif;
+}
+body {
+  margin: 0;
+}
+img.top{
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+    }
+a:hover{
+			color:white;
+			font-weight:bold;
+		}
+		
+input[type=text]{
+					
+					height:50px;
+					width:350px;
+					border-radius:20px;
+					background-color:black;
+					color:Tan;
+					border:none;
+					font-size:20px;
+					border-bottom: 5px solid #192537;
+					font-family:"Arial",sans-serif;
+					padding-left:60px;
+					margin-left:10px;
+				}
+input[type=password]{
+					height:50px;
+					width:350px;
+					border-radius:20px;
+					background-color:black;
+					color:Tan;
+					border:none;
+					font-size:20px;
+					border-bottom: 5px solid #192537;
+					font-family:"Arial",sans-serif;
+					padding-left:60px;
+					margin-left:10px;
+				}
+textarea{
+					width:350px;
+					border-radius:20px;
+					background-color:black;
+					color:Tan;
+					border:none;
+					font-size:20px;
+					border-bottom: 5px solid #192537;
+					font-family:"Arial",sans-serif;
+					padding-left:20px;
+					margin-left:10px;
+				}
+input[type=text]:focus 
+{
+	outline:none;
+	width:450px;
+  transition:width 0.5s;
+}
+input[type=password]:focus 
+{
+	outline:none;
+	width:450px;
+  transition:width 0.5s;
+}
+textarea:focus 
+{
+	outline:none;
+	width:450px;
+  transition:width 0.5s;
+}
+</style>
+</head>
+<body style="background-color:black;">
+<div style=" height:230px; background-color:#192537;">
+<img class="top" src="toplogo.jpg"/>
+</div>
+<form name="main" onsubmit="return validate_info();" autocomplete="off" method="post" action="regTodb.php">
+<div style=" background-color:black; color:white; border-radius:15px 50px;  width:600px;";>
+<!--<fieldset style="border-radius:15px 50px;">
+<legend style="text-align:center; font-size:25px;">NEW_REGISTERATION</legend>-->
+<p style="font-family:Arial,sans-serif; font-size:60px;">Sign up</p>
+<table>
+<tr>
+	<td>Name</br><span style="color:red; font-size:12px; "  id="sp1"></span></td></tr>
+<tr>
+	<td style="padding-left:10px;"><input  placeholder="First Name" type="text" name="regtxt1" id="regtxt1"required /></td>
+	
+</tr>
+<tr>
+<td></br></td></tr>
+<tr>
+	<td>Last Name</br><span style="color:red; font-size:12px;"  id="sp2"></td>
+	</tr>
+	<tr>
+	<td style="padding-left:10px;"><input placeholder="Last Name" autocomplete="off" type="text" name="regtxt2" id="regtxt2" required /></td>
+</tr>
+<tr><td></br></td></tr>
+<tr>
+<td>Mobile Number</br><span style="color:red; font-size:12px;"  id="sp3"></td>
+</tr>
+<tr>
+	<td style="padding-left:10px;"><input autocomplete="off" placeholder="Mobile" type="text" name="regtxt3" required /></td>
+	</tr>
+<tr><td></br></td></tr>
+<tr>
+<td>Gender</td></tr>
+<tr>
+	<td style="padding-left:10px;"><input type="radio"  name="rgrd1" value="male" required />Male
+	<input type="radio" name="rgrd1" value="female"/>Female</td>
+</tr>
+<tr>
+<td></br></td></tr>
+<tr>
+<td>Email-id</td></tr>
+<tr>
+	<td style="padding-left:10px;"><input autocomplete="off" type="text" placeholder="Email" name="regtxt4" id="regtxt4" required /></td>
+</tr>
+<tr>
+<td></br></td></tr>
+<tr>
+<td>User id</br><span style="color:red; font-size:12px;"  id="sp4"></td>
+</tr>
+<tr>
+	<td style="padding-left:10px;"><input autocomplete="off" placeholder="User Name" type="text" name="regtxt5" id="regtxt5"  required /></td>
+</tr>
+<tr>
+<td></br></td></tr>
+<tr>
+<td>Password</br><span style="color:red; font-size:12px;"  id="sp5"></td>
+</tr>
+<tr>
+	<td style="padding-left:10px;"><input placeholder="Password" type="password" name="regtxt6" id="regtxt6"  required /></td>
+</tr>
+<tr>
+<td></br></td></tr>
+<tr>
+<td>Confirm Password</td>
+</tr>
+<tr>
+	<td style="padding-left:10px;"><input placeholder="Confirm Password"type="password" name="regtxt7" id="regtxt7" required /></td>
+</tr>
+<tr>
+<td></br></td></tr>
+<tr>
+<td>Full Address</td>
+</tr>
+<tr>
+	<td style="padding-left:10px;"><textarea placeholder="Full Address" autocomplete="off" rows="5" cols="30" name="regtxt8" id="regtxt8" required ></textarea></td>
+</tr>
+<tr>
+<td></br></td></tr>
+<tr>
+<td></br></td></tr>
+<tr>
+<td>
+<input type="submit" value="Sign Up" style="width:200px; font-weight:bolder; margin-left:150px; font-family:'Arial',sans-serif; border:none; background-color:#192537; padding:10px 10px 10px 10px; cursor:pointer; border-radius:20px; color:Tan;" />
+<p style="font-size:20px; color:Tan; font-weight:bolder; font-family:Georgian,serif;">if already Exist?</p><a href="login_page.html" style="padding-left:50px; font-size:20px;">Login Page</a>
+</td>
+</tr>
+</table>
+</div>
+</form>
+<script type="text/javascript" language="javascript">
+function validate_info()
+{
+		var name=document.main.regtxt1.value;
+		var Lname=document.main.regtxt2.value;
+		var Mno=document.main.regtxt3.value;
+		var email=document.main.regtxt4.value;
+		var Uid=document.main.regtxt5.value;
+		var pss=document.main.regtxt6.value;
+		var Cpss=document.main.regtxt7.value;
+		if(!isNaN(name))
+		{
+				document.getElementById('sp1').innerHTML="**Name can only contains alphabets.";
+				return false;
+		}
+		if(name.length <5)
+		{
+				document.getElementById('sp1').innerHTML="**Name should have atleast 5 alphabets.";
+				return false;
+		}
+		if(!isNaN(Lname))
+		{
+				document.getElementById('sp2').innerHTML="**Last Name can only contains alphabets.";
+				return false;
+		}
+		if(Lname.length <3)
+		{
+				document.getElementById('sp2').innerHTML="**Last Name should have atleast 3 alphabets.";
+				return false;
+		}
+		if(isNaN(Mno))
+		{
+				document.getElementById('sp3').innerHTML="**Mobile number can only contains digits.";
+				return false;
+		}
+		if(Mno.length !=10)
+		{
+				document.getElementById('sp3').innerHTML="**Mobile number should be of 10 digits.";
+				return false;
+		}
+		if(Uid.length <5)
+		{
+				document.getElementById('sp4').innerHTML="**User Id should have atleast 5 characters.";
+				return false;
+		}
+		if(pss != Cpss)
+		{
+				document.getElementById('sp5').innerHTML="**Password and confirm Password do not match.";
+				return false;
+		}
+}
+</script>
+</body>
+</html>

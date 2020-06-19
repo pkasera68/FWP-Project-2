@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>
+		Login WOU.com</title>
+		<link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+<style>
+td{
+	color:white;
+	font-size:16px;
+	font-weight:Bolder;
+	font-family:"Arial",sans-serif;
+	padding-left:30px;
+}
+input[type=text]{
+					
+					height:50px;
+					width:270px;
+					background-color:#090909;
+					color:Tan;
+					border:none;
+					font-size:16px;
+					border-bottom: 1px solid white;
+					font-family:"Arial",sans-serif;
+				}
+input[type=password]{
+					height:50px;
+					width:270px;
+					background-color:#090909;
+					color:Tan;
+					border:none;
+					font-size:16px;
+					border-bottom: 1px solid white;
+					font-family:"Arial",sans-serif;
+				}
+input[type=password]:focus{
+							outline:none;
+							}
+input[type=submit]:focus{
+							outline:none;
+							}
+input[type=text]:focus{
+							outline:none;
+							}
+.pos{
+	
+	color:white;
+	font-size:16px;
+	font-weight:Bolder;
+	font-family:"Arial",sans-serif;
+	padding-left:30px;
+	}
+	.pos_bt
+	{
+		padding-left:25px;
+		}
+.link{
+	font-size:14px;
+	color:grey;
+	text-decoration:none;
+	font-weight:1;
+}
+		
+html { 
+  background: url(fire_smokebg.jpg) no-repeat center fixed; /*fire_smokebg.jpg*/
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<form name="f1" onsubmit="return validate();" method="post" action="Login.php">
+<fieldset style="position:fixed; border:none; top:50%; left:50%; margin-top:-200px; border-radius:5px; margin-left:-200px;  background-color:#090909; color:white; width:350px; height:450px;">
+<legend ><img src="user2.png" style="margin-left:130px; hieght:80px; width:80px;"></legend>
+<p style="padding-left:28%; font-weight:bolder; font-size:25px; font-family:'Arial',sans-serif;">Get Started</p>
+<span style="color:red; font-size:16px; width:500px;" id="sp1"></span>
+<table>
+	<tr>
+		<td class="pos">Username</td>
+		</tr>
+		<tr>
+		<td><input autocomplete="off" placeholder="Enter Username" type="text" name="lgtxt1" id="lg1" required></input></td>
+		</tr>
+	<tr><td></br></td></tr>
+	<tr>
+		<td>Password</td>
+		</tr>
+		<tr>
+		<td><input type="password" placeholder="Enter Password" name="lgtxt2" required></input></td>
+	</tr>
+	<tr><td></br></td></tr>
+	<tr>
+		<td class="pos_bt"><input type="submit" name="sub1" Value="Login" style="width:280px; font-size:18px; font-family:'Arial',sans-serif; border-color:black; background-color:red; padding:10px 10px 10px 10px; cursor:pointer; border-radius:40px; color:white;"> </input></td>
+	</tr>
+	<tr><td></br></td></tr>
+	<tr>
+		<td ><a href="Registration.html" class="link" >Don't have an account?</a></td>
+	</tr>
+</table>
+</fieldset> 
+</form>
+
+<script type="text/javascript" language="javascript">
+function validate()
+{
+	var uname=document.f1.lgtxt1.value;
+	if(uname.length<5)
+	{
+			document.getElementById('sp1').innerHTML="**Username should be of atleast 5 characters.";
+				return false;
+	}
+}
+</script>
+</body>
+</html>

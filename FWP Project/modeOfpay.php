@@ -1,0 +1,15 @@
+<?php
+		session_start();
+		$modeOfpay=$_POST['modeOfpay'];
+		$addr=$_POST['buy'];
+		$_SESSION['paymode']=$modeOfpay;
+		$_SESSION['addr']=$addr;
+		if($modeOfpay=='cod')
+		{
+			header("Location:orderSuccess.php");
+		}
+		else
+		{
+				header("Location:onlinePay.php");
+		}
+?>

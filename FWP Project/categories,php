@@ -1,0 +1,241 @@
+<?php 
+		session_start();
+		if (!isset($_SESSION['name'])) {
+    header("Location: expiredS.php");
+    exit;
+		}//
+?>
+<html>
+<head>
+<title>
+		Categories</title>
+		<link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Social media icon library-->
+<style>	
+.fa {
+	
+  padding: 10px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+a:hover{
+			color:blue;
+			font-weight:bolder;
+			
+		}
+a{
+		text-decoration:none; 
+			color:black;
+			font-family:Arial,sans-serif;
+			
+}
+hr { 
+            position: relative; 
+            top: 20px; 
+            border: none; 
+            height: 3px; 
+            background: black; 
+            margin-bottom: 50px; 
+			width:300px;
+			
+        } 
+td.pr{
+		height:350px;
+		width:250px;
+		background-color:white;
+		padding-left:30px;
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+	body{
+			margin:0;
+		}
+	span.h{
+			
+			font-family:Arial,sans-serif;
+			font-size:19px;
+			font-weight:bold;
+		}
+		td.prd{
+		height:350px;
+		width:250px;
+		background-color:white;
+		padding-left:40px;
+		padding-bottom:80px;
+	}
+	img.top{
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+    }
+td.pr:hover{
+				transform:scale(1.1);
+				border:1px black dotted;
+			}
+td.prd:hover{
+				transform:scale(1.1);
+				border:1px black dotted;
+			}
+</style>
+</head>
+<body style="background-color:#EAEDED;">
+<div style=" height:230px; background-color:#192537;">
+<a href="homepage.php" ><img  class="top" src="toplogo.jpg"/></a>
+</div>
+<!--<a  href="PcAndEl.html">* Pressure Cookers and Electronics</a>
+</br>
+</br>
+<a  href="">* Dinner Sets</a>
+</br>
+</br>
+<a  href="">* Glasses and Plates</a>
+</br>
+</br>
+<a  href="">* Knives and Spoons</a>
+</br>
+</br>
+<a  href="">* Pots and Drums</a>
+</br>
+</br>
+<a  href="">* Non-stick pans,Fry pans and Kadai</a>
+</br>
+</br>
+<a  href="">* Brass and Bronze</a>-->
+</br></br></br></br>
+<span style="color:black; font-family:Impact,Charcoal,sans-serif; font-weight:bold; font-size:45px;">Our Categories</span>
+<hr align="left"/>
+<table border="0">
+<tr >
+<td width="20px"></td>
+	<td class="pr" >
+	<span class="h">Cookers and Electronics.</span>
+	</br></br></br>
+	<a href="myPandEl.php"><img src="prsC.jpg" style="margin-left:30px;"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp  <b>Pressure Cookers.</b></a>
+	</br></br>
+	<a href="myPandEl2.php"><img src="mxrC.png" style="margin-left:10px;"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp  <b>Grinders and Others.</b></a>
+	</td>
+<td width="20px"></td>
+	<td class="pr" >
+	<span class="h">Knives and Spoons.</span>
+	</br></br></br>
+	<a href="myKnvandsp.php"><img src="knvC.jpg" style="margin-left:30px;"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Knives.</b></a>
+	</br></br>
+	<a href="myKnvandsp2.php"><img src="spoonsC.jpg" style="margin-left:10px;"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Spoons.</b></a>
+	</td>
+<td width="20px"></td>
+	<td class="prd" >
+	<span class="h">&nbsp &nbsp &nbsp Dinner Table.</span>
+	</br></br></br>
+	<a href="mydinnerSets.php"><img src="dnrC.jpg"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Dinner sets.</b></a>
+	</td>
+<td width="20px"></td>
+	<td class="pr" >
+	<span class="h">Cups Plates and Glasses.</span>
+	</br></br></br>
+	<a href="myCupsPltsGls.php"><img src="cpsplsC.jpg" style="margin-left:10px;"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Steel.</b></a>
+	</br></br>
+	<a href="myCupsPltsGls2.php"><img src="cpsplsC1.jpg" style="margin-left:10px;"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Crockery.</b></a>
+	</td>
+</tr>
+<tr>
+<td height="20px"></td></tr>
+<tr >
+<td width="20px"></td>
+	<td class="pr" >
+	<span class="h">Non-Stick Cookawares.</span>
+	</br></br></br>
+	<a href="#"><img src="fryP.jpg" style="margin-left:10px;"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Fry Pans.</b></a>
+	</br></br>
+	<a href="#"><img src="fryP2.jpg" style="margin-left:10px;"/></br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Tawa and Kadai.</b></a>
+	</td>
+<td width="20px"></td>
+	<td class="pr" >
+	<span class="h">Royal Brass and Bronze.</span>
+	</br></br></br>
+	<a href="#"><img src="brsC.jpg" style="margin-left:10px;"/></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Brass.</b></a>
+	</br></br>
+	<a href="#"><img src="brnzC.jpg" style="margin-left:10px;"/></br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Bronze.</b></a>
+	</td>
+<td width="20px"></td>
+	<td class="pr" >
+	<span class="h">Steel Pots and Drums.</span>
+	</br></br></br>
+	<a href="#"><img src="steelp1.jpg" style="margin-left:10px;"/></br></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Steel Pots.</b></a>
+	</br></br></br></br>
+	<a href="#"><img src="drumsC1.jpg" style="margin-left:30px;"/></br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Drums.</b></a>
+	</td>
+<td width="20px"></td>
+	<td class="pr" >
+	<span class="h">Best Offfers Products.</span>
+	</br></br></br>
+	<a href="PcAndEl.php"><img src="amzC2.jpg" style="margin-left:10px;"/></br></br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Amazon.com</b></a>
+	</br></br></br></br>
+	<a href="PcAndEl2.php"><img src="flp.jpg" style="margin-left:30px;"/></br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Flipkart.com</b></a>
+	</td>
+</tr>
+</table>
+</br></br></br></br>
+<div style='background-color:#2F4F4F; height:330px;'>
+<table>
+<tr>
+	<td >
+			<img src='Logo2.png' style='margin-left:100px; border-radius:20px;' height='70px' width='350px'/>
+			</br>
+			<span style='color:tan; margin-left:150px; font-family:Brush Script MT,sans-serif; font-size:27px;'> You Eat We Serve..</span>
+			</br></br></br></br>
+			<span style='color:white;  margin-left:50; '>Copyright <span style='font-size:22px;'>&copy </span> 2020 All rights reserved</span>
+			<span style='color:Tan; font-weight:bold;'>WORLD_OF_UTENSILS.COM</span>
+	</td>
+	
+	<td >
+		<span style='color:tan;  margin-left:250px; font-family:Arial,sans-serif; font-weight:bolder; font-size:30px;'>Contact us</span>
+		<table style='margin-top:20px;' >
+			<tr>
+				<td>
+					<span style='color:tan;  margin-left:250px; font-family:Arial,sans-serif;  font-size:16px;'><b>PHONE:</b></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style='color:tan; font-family:Arial,sans-serif;  margin-left:250px; font-size:16px;'>+919893074443</span></br>
+					<span style='color:tan; font-family:Arial,sans-serif;  margin-left:250px; font-size:16px;'>+919009752257</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					</br>
+					</br>
+					
+					<span style='color:tan;  margin-left:250px; font-family:Arial,sans-serif;  font-size:16px;'><b>EMAIL US:</b></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style='color:tan; font-family:Arial,sans-serif;  margin-left:250px; font-size:16px;'>pkasera68@gmail.com</span></br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</br>
+		<span style='color:tan;  margin-left:250px; font-family:Arial,sans-serif; font-weight:bold; font-size:16px;'>Get in touch:</span></br>			
+		<a href='https://www.facebook.com/'  style='margin-left:240px;'class='fa fa-facebook'></a>
+		<a href='https://twitter.com/login' style='margin-left:20px;' class='fa fa-twitter'></a>
+		<a href='' style='margin-left:20px;' class='fa fa-google'></a>
+		<a href='' style='margin-left:20px;' class='fa fa-whatsapp'></a>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>	
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,81 @@
+<html style="background-color: #EAEDED">
+<head>
+<title>
+		In Pc and El1</title>
+		<link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+<style>
+a:hover{
+			font-weight:bolder;
+			color:Tan;
+		}
+a{
+		
+		font-size:18px;
+		text-decoration:none;
+		font-weight:bolder;
+}
+p.cl1{
+	font-size:22px;
+	color:blue;
+	font-weight:bolder;
+}
+div{
+		
+	}
+	.pagination a {
+  color: black;
+  
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+</head>
+<body>
+<div style=" height:230px; background-color:#192537;">
+<a href="homepage.html" ><img src="toplogo.jpg"/></a>
+</div>
+
+		<?php 
+	$link=mysqli_connect("localhost","root","","customers");
+	if($link===false)
+	{
+		echo "Could not connect to database student:".mysqli_connect_error();
+	}
+	$sql="SELECT * FROM PandEl";
+	if($re=mysqli_query($link,$sql))
+	{
+		if(mysqli_num_rows($re)>0)
+		{
+			while($row=mysqli_fetch_array($re))
+			{
+				echo $row['intro']." ";
+				echo $row['brand']." ";
+				echo $row['MRP']." ";
+				echo $row['price']." ";
+				echo $row['discount']." ";
+				echo $row['rating']." ";
+				 $img=$row['img_path'];
+				 echo "<img src='$img' alt='cant'/>";
+			}
+			
+			mysqli_free_result($re);
+		}
+		else
+		{
+			echo "No rows to display.";
+		}
+	}
+	else
+	{
+		echo "ERROR:Could not execute $sql :".mysqli_error($link);
+	}
+?>
+</body>
+</html>
